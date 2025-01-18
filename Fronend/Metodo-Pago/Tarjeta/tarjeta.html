@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Pago</title>
+  <link rel="stylesheet" href="tarjeta.css">
+  <link rel="icon" href="../../assets/favicon-32x32.png" type="image/png">
+
+</head>
+<body>
+  <div class="container">
+    <h1>Pago con Tarjeta</h1>
+    <form id="payment-form">
+      <div class="form-group">
+        <label for="card-name">Nombre en la tarjeta</label>
+        <input type="text" id="card-name" name="card-name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="card-number">Número de tarjeta</label>
+        <input type="text" id="card-number" name="card-number" maxlength="16" required>
+      </div>
+
+      <div class="form-group">
+        <label for="expiry-date">Fecha de expiración (MM/AA)</label>
+        <input type="text" id="expiry-date" name="expiry-date" maxlength="5" placeholder="MM/AA" required>
+      </div>
+
+      <div class="form-group">
+        <label for="cvv">Código de seguridad (CVV)</label>
+        <input type="text" id="cvv" name="cvv" maxlength="3" required>
+      </div>
+
+      <div class="form-group total">
+        <label>Total a pagar</label>
+        <span id="total-amount">€100.00</span>
+      </div>
+
+      <button type="submit" id="pay-button">Pagar</button>
+    </form>
+    
+    <div id="payment-status"></div>
+
+  <a href="../Banco/banco.html"><h5 style="text-align: center;">Pagar con cuenta bancaria en su lugar</h5></a>
+  </div>
+
+
+
+  <script src="tarjeta.js"></script>
+</body>
+</html>
